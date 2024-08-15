@@ -2,15 +2,59 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>title</title>
-    <iframe
-      link="false"
-      width="100%"
-      height="650"
-      frameborder="0"
-      scrolling="no"
-      src="//plotly.com/~NanaBanana/1.embed"
-    ></iframe>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>The Bible Channel</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div
+      id="myPlot"
+      style="
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin-left: auto;
+        margin-right: auto;
+      "
+    ></div>
+
+    <script>
+      // Data for the line graph
+      var trace1 = {
+        x: [
+          5300, 5400, 5500, 5600, 5700, 5800, 5900, 6000, 6100, 6200, 6300,
+          6400, 6500, 6600,
+        ],
+        y: [0, 10, 12, 15, 18, 20, 22, 25, 27, 29, 31, 34, 36, 40],
+        mode: "lines",
+        fill: "tozeroy",
+        type: "scatter",
+        line: {
+          color: "#1916c2",
+        },
+      };
+
+      // Layout for the graph
+      var layout = {
+        title: "The Bible Channel Member Count",
+        xaxis: {
+          title: "Member Count",
+        },
+        yaxis: {
+          title: "Days Since 18 July",
+        },
+        paper_bgcolor: "#121212", // Background color for the plot area
+        plot_bgcolor: "#121212", // Background color for the graph area
+        font: {
+          color: "#ffffff", // Font color
+        },
+      };
+
+      // Plotting the graph
+      Plotly.newPlot("myPlot", [trace1], layout);
+    </script>
+  </body>
 </html>
