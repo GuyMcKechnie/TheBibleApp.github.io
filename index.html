@@ -6,35 +6,23 @@
     <link rel="stylesheet" href="index.css" />
     <title>The Bible Channel</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
   </head>
-  <body style="background-color: #121212">
-    <div
-      id="myPlot"
-      style="
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin-left: auto;
-        margin-right: auto;
-      "
-    ></div>
-
+  <body style="background-color: #121212; overflow: hidden; touch-action: none">
+    <div id="scatterPlot" style="width: 100%; height: 100vh"></div>
     <script>
-      // Data for the line graph
       var trace1 = {
         x: [
           5300, 5400, 5500, 5600, 5700, 5800, 5900, 6000, 6100, 6200, 6300,
-          6400, 6500, 6600,
+          6400, 6500, 6600, 6700,
         ],
-        y: [0, 10, 12, 15, 18, 20, 22, 25, 27, 29, 31, 34, 36, 40],
+        y: [0, 3, 5, 7, 9, 10, 11, 14, 17, 18, 21, 23, 25, 26, 28],
         mode: "lines",
-        fill: "tozeroy",
-        type: "scatter",
         line: {
-          color: "#1916c2",
+          color: "#ffffff",
         },
+        type: "scatter",
+        fill: "tozeroy",
       };
 
       // Layout for the graph
@@ -54,7 +42,11 @@
       };
 
       // Plotting the graph
-      Plotly.newPlot("myPlot", [trace1], layout);
+      Plotly.newPlot("scatterPlot", [trace1], layout, {
+        displayModeBar: false,
+        staticPlot: false,
+        responsive: true,
+      });
     </script>
   </body>
 </html>
