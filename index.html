@@ -8,7 +8,7 @@
     <link rel="icon" href="./icon.svg" type="image/svg+xml" />
   </head>
   <body style="background-color: #121212; overflow: hidden; touch-action: none">
-    <div id="scatterPlot" style="width: 100%; height: 100vh"></div>
+    <div id="scatterPlot" style="width: 100%"></div>
     <script>
       var trace1 = {
         x: [
@@ -43,7 +43,7 @@
       // Plotting the graph
       Plotly.newPlot("scatterPlot", [trace1], layout, {
         displayModeBar: false,
-        staticPlot: false,
+        staticPlot: true,
         responsive: true,
       });
     </script>
