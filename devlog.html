@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Devlog | The Bible Channel</title>
+
+    <!-- External CSS and libraries -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <!-- Top Navigation Menu -->
+    <h1>The Bible Channel</h1>
+    <div class="topnav" id="topnav">
+      <a href="index.html"> <i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="admin.html"> <i class="fa fa-fw fa-user"></i> Admins</a>
+      <a href="devlog.html"> <i class="fa fa-fw fa-code"></i> Devlog</a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <main>
+      <!-- Section: Development Log -->
+      <section class="w3-container">
+        <h1>Development Log</h1>
+      </section>
+
+      <!-- Section: Devlog Entries -->
+      <section class="w3-container">
+        <!-- Devlog Entry 1: Initial Setup -->
+        <article class="devlog-entry">
+          <h2>Update 1: Initial Setup</h2>
+          <p>Date: August 17, 2024</p>
+          <p>
+            The initial structure for The Bible Channel's admin area and devlog
+            page has been established. This includes setting up the basic HTML
+            structure and linking stylesheets. Next, we'll work on implementing
+            dynamic font scaling for responsive design.
+          </p>
+        </article>
+
+        <!-- Devlog Entry 2: Admin Area Completed -->
+        <article class="devlog-entry">
+          <h2>Update 2: Admin Area Completed</h2>
+          <p>Date: August 20, 2024</p>
+          <p>
+            The admin area has been fully set up with a functioning layout.
+            Admins can now submit posts for review, and we've added quality
+            check functionality. Next, we're focusing on improving post quality
+            control and scalability for the growing admin team.
+          </p>
+        </article>
+
+        <!-- Devlog Entry 3: Devlog Area Completed -->
+        <article class="devlog-entry">
+          <h2>Update 3: Devlog Area Completed</h2>
+          <p>Date: August 22, 2024</p>
+          <p>
+            The devlog area has been fully set up with a functioning layout.
+          </p>
+        </article>
+
+        <!-- Devlog Entry 4: Dynamic Font Scaling -->
+        <article class="devlog-entry">
+          <h2>Update 4: Dynamic Font Scaling</h2>
+          <p>Date: August 22, 2024</p>
+          <p>
+            We've implemented dynamic font scaling using CSS media queries. This
+            allows the font size to adjust based on the device's screen
+            resolution, ensuring a consistent and visually appealing experience
+            for users. Next, we'll focus on improving user experience and
+            accessibility by adding keyboard navigation support.
+          </p>
+        </article>
+
+        <!-- Devlog Entry 5: Icons Added Site Wide -->
+        <article class="devlog-entry">
+          <h2>Update 5: Icons Added Site Wide</h2>
+          <p>August 22, 2024</p>
+          <p>
+            We're excited to announce that icons have been added site-wide,
+            enhancing the overall user experience and visual appeal of our
+            platform. This update is a significant step towards creating a more
+            engaging and intuitive interface. Next, our focus will shift to
+            refining the design and layout to provide an even better experience
+            for our users.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- Script to toggle top navigation menu -->
+    <script>
+      function toggleMenu() {
+        var x = document.getElementById("topnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </body>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-indigo">
+    <p style="text-align: center; margin: 10px 0">
+      &copy; 2024 The Bible Channel. All rights reserved.
+    </p>
+  </footer>
+</html>

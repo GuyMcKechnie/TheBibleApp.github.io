@@ -1,97 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Bible Channel</title>
+    <title>Home | The Bible Channel</title>
+
+    <!-- External CSS and libraries -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link rel="icon" href="./icon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <link rel="stylesheet" href="index.css" />
   </head>
 
-  <header class="w3-container w3-indigo">
+  <body>
+    <!-- Top Navigation Menu -->
     <h1>The Bible Channel</h1>
-  </header>
-
-  <ul class="nav-bar">
-    <li class="index-active"><a href="index.html">Home</a></li>
-    <li><a href="admin.html">Admins</a></li>
-    <li style="float: right"><a href="about.html">About</a></li>
-  </ul>
-
-  <main>
-    <section id="admin" class="w3-container">
-      <h2>Join Our Administration Team</h2>
-      <p>
-        Are you eager to make a meaningful impact in our community? Explore how
-        you can become an integral part of our administration team and play a
-        key role in guiding our shared journey.
-      </p>
-      <a href="admin.html">
-        <div
-          class="w3-container w3-card w3-button w3-hover-shadow"
-          style="
-            width: auto;
-            max-width: 15vw;
-            height: 10vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          "
-        >
-          Find Out More
-        </div>
+    <div class="topnav" id="topnav">
+      <a href="index.html"> <i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="admin.html"> <i class="fa fa-fw fa-user"></i> Admins</a>
+      <a href="devlog.html"> <i class="fa fa-fw fa-code"></i> Devlog</a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
       </a>
-    </section>
-    <section id="stats" class="w3-container">
-      <h2>Channel Statistics</h2>
-      <div id="scatterPlot" style="width: 100%" class="w3-card-4"></div>
-    </section>
-  </main>
+    </div>
 
+    <main>
+      <!-- Section: The Bible Channel -->
+      <section id="admin" class="w3-container">
+        <p>
+          The Bible Channel is a vibrant Christian community dedicated to
+          sharing inspiring and faith-based content that brings the Word of God
+          to life. Our mission is to create a space where believers can come
+          together, deepen their understanding of scripture, and be encouraged
+          in their walk with Christ. With a team of dedicated administrators, we
+          strive to maintain a high standard of quality in everything we share,
+          from devotionals and prayers to thought-provoking discussions and
+          Bible verses. Join us as we grow in faith and share the message of
+          God's love with the world.
+        </p>
+        <a
+          href="admin.html"
+          class="button w3-button w3-indigo w3-hover-shadow w3-card w3-round"
+        >
+          <i class="fab fa-whatsapp"></i> Join Our Community
+        </a>
+      </section>
+
+      <!-- Section: Join Our Administration Team -->
+      <section id="admin" class="w3-container">
+        <h2>Join Our Administration Team</h2>
+        <p>
+          Are you eager to make a meaningful impact in our community? Explore
+          how you can become an integral part of our administration team and
+          play a key role in guiding our shared journey.
+        </p>
+        <a
+          href="admin.html"
+          class="button w3-button w3-indigo w3-hover-shadow w3-card w3-round"
+        >
+          <i class="fas fa-arrow-right"></i> Find Out More
+        </a>
+      </section>
+
+      <!-- Section: Channel Statistics -->
+      <section id="stats" class="w3-container">
+        <h2>Channel Statistics</h2>
+        <div
+          id="scatterPlot"
+          style="width: 100%; height: 400px"
+          class="w3-card"
+        ></div>
+      </section>
+    </main>
+
+    <!-- Plotly script to generate scatter plot -->
+    <script>
+      // Define data for scatter plot
+      var trace1 = {
+        x: [
+          5300, 5400, 5500, 5600, 5700, 5800, 5900, 6000, 6100, 6200, 6300,
+          6400, 6500, 6600, 6700, 6800, 6900, 7000,
+        ],
+        y: [0, 3, 5, 7, 9, 10, 11, 14, 17, 18, 21, 23, 25, 26, 28, 31, 33, 35],
+        mode: "lines",
+        line: { color: "#3f51b5" },
+        type: "scatter",
+        fill: "tozeroy",
+      };
+
+      // Define layout for scatter plot
+      var layout = {
+        title: "The Bible Channel Member Count",
+        xaxis: { title: "Member Count" },
+        yaxis: { title: "Days Since 18 July" },
+        paper_bgcolor: "#121212",
+        plot_bgcolor: "#121212",
+        font: { color: "#ffffff" },
+      };
+
+      // Generate scatter plot using Plotly
+      Plotly.newPlot("scatterPlot", [trace1], layout, {
+        displayModeBar: false,
+        staticPlot: true,
+        responsive: true,
+      });
+    </script>
+
+    <!-- Script to toggle top navigation menu -->
+    <script>
+      function toggleMenu() {
+        var x = document.getElementById("topnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </body>
+
+  <!-- Footer -->
   <footer class="w3-container w3-indigo">
-    <p style="text-align: center">
+    <p style="text-align: center; margin: 10px 0">
       &copy; 2024 The Bible Channel. All rights reserved.
     </p>
   </footer>
-
-  <script>
-    var trace1 = {
-      x: [
-        5300, 5400, 5500, 5600, 5700, 5800, 5900, 6000, 6100, 6200, 6300, 6400,
-        6500, 6600, 6700,
-      ],
-      y: [0, 3, 5, 7, 9, 10, 11, 14, 17, 18, 21, 23, 25, 26, 28],
-      mode: "lines",
-      line: {
-        color: "#3f51b5",
-      },
-      type: "scatter",
-      fill: "tozeroy",
-    };
-
-    // Layout for the graph
-    var layout = {
-      title: "The Bible Channel Member Count",
-      xaxis: {
-        title: "Member Count",
-      },
-      yaxis: {
-        title: "Days Since 18 July",
-      },
-      paper_bgcolor: "#121212", // Background color for the plot area
-      plot_bgcolor: "#121212", // Background color for the graph area
-      font: {
-        color: "#ffffff", // Font color
-      },
-    };
-
-    // Plotting the graph
-    Plotly.newPlot("scatterPlot", [trace1], layout, {
-      displayModeBar: false,
-      staticPlot: true,
-      responsive: true,
-    });
-  </script>
 </html>
