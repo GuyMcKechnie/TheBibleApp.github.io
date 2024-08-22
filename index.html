@@ -38,45 +38,85 @@
 
     <main>
       <!-- Section: The Bible Channel -->
-      <section id="admin" class="w3-container">
-        <p>
-          The Bible Channel is a vibrant Christian community dedicated to
-          sharing inspiring and faith-based content that brings the Word of God
-          to life. Our mission is to create a space where believers can come
-          together, deepen their understanding of scripture, and be encouraged
-          in their walk with Christ. With a team of dedicated administrators, we
-          strive to maintain a high standard of quality in everything we share,
-          from devotionals and prayers to thought-provoking discussions and
-          Bible verses. Join us as we grow in faith and share the message of
-          God's love with the world.
+      <section id="bible-channel" class="tbc-section w3-container">
+        <img
+          src="tbc-container-image.jpg"
+          alt="Jesus praying."
+          class="tbc-container-image"
+        />
+        <div class="tbc-overlay"></div>
+        <div class="tbc-centered">
+          <h4>The Bible Channel</h4>
+          <p>
+            Join The Bible Channel on WhatsApp for daily devotionals, prayers,
+            scripture reflections, and inspiring messages. Stay connected with
+            God's Word and strengthen your faith.
+          </p>
+          <a
+            href="https://whatsapp.com/channel/0029VaHkSUX2P59srKXDBa0H"
+            class="button w3-button w3-hover-shadow w3-card w3-round"
+          >
+            <i class="fab fa-whatsapp"></i> Join The Channel
+          </a>
+        </div>
+      </section>
+
+      <!-- Section: The Bible Community -->
+      <section id="bible-community" class="w3-container">
+        <p style="text-align: center">
+          Become part of The Bible Community, a place for Christians to connect,
+          share, and grow together. Engage in conversations, celebrate
+          milestones, and contribute your own faith-inspired content in a
+          supportive, like-minded space. Join our community and take an active
+          role in spreading the message of God’s love.
         </p>
         <a
-          href="https://whatsapp.com/channel/0029VaHkSUX2P59srKXDBa0H"
-          class="button w3-button w3-indigo w3-hover-shadow w3-card w3-round"
+          href="https://chat.whatsapp.com/EiwtC7HR60r6uGMMd8E85j"
+          class="button-backgroundless"
         >
           <i class="fab fa-whatsapp"></i> Join Our Community
         </a>
       </section>
 
+      <hr />
+
       <!-- Section: Join Our Administration Team -->
       <section id="admin" class="w3-container">
-        <h2>Join Our Administration Team</h2>
-        <p>
-          Are you eager to make a meaningful impact in our community? Explore
-          how you can become an integral part of our administration team and
-          play a key role in guiding our shared journey.
-        </p>
-        <a
-          href="admin.html"
-          class="button w3-button w3-indigo w3-hover-shadow w3-card w3-round"
-        >
-          <i class="fas fa-arrow-right"></i> Find Out More
-        </a>
+        <div style="border-radius: 16px 16px 0px 0px">
+          <img
+            src="admin-container-image.jpg"
+            alt="Christian cross."
+            class="admin-container-image"
+            style="border-radius: 16px 16px 0px 0px"
+          />
+          <h2 style="text-align: center; margin-bottom: 0px">
+            Want To Contribute?
+          </h2>
+          <p
+            style="
+              text-align: center;
+              margin-top: 0px;
+              padding-left: 5px;
+              padding-right: 5px;
+            "
+          >
+            Are you eager to make a meaningful impact in our community? Explore
+            how you can become an integral part of our administration team and
+            play a key role in guiding our shared journey.
+          </p>
+          <a href="admin.html" class="button-backgroundless">
+            <i class="fas fa-arrow-right"></i> Find Out More
+          </a>
+        </div>
       </section>
+
+      <hr />
 
       <!-- Section: Channel Statistics -->
       <section id="stats" class="w3-container">
-        <h2>Channel Statistics</h2>
+        <h2 style="text-align: center; margin-bottom: 0px">
+          Channel Statistics
+        </h2>
         <div
           id="scatterPlot"
           style="width: 100%; height: 400px"
@@ -95,7 +135,7 @@
         ],
         y: [0, 3, 5, 7, 9, 10, 11, 14, 17, 18, 21, 23, 25, 26, 28, 31, 33, 35],
         mode: "lines",
-        line: { color: "#3f51b5" },
+        line: { color: "#008080" },
         type: "scatter",
         fill: "tozeroy",
       };
@@ -107,7 +147,7 @@
         yaxis: { title: "Days Since 18 July" },
         paper_bgcolor: "#ffffff",
         plot_bgcolor: "#ffffff",
-        font: { color: "#3f51b5" },
+        font: { color: "#008080" },
       };
 
       // Generate scatter plot using Plotly
@@ -132,7 +172,7 @@
   </body>
 
   <!-- Footer -->
-  <footer class="w3-container w3-indigo">
+  <footer class="w3-container">
     <p style="text-align: center; margin: 10px 0">
       &copy; 2024 The Bible Channel. All rights reserved.
     </p>

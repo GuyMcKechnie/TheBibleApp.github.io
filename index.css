@@ -1,11 +1,16 @@
 /* Root styles */
 :root {
-  /* Background color and text color */
-  /*background-color: hsl(0, 0%, 10%);
-  color: white;
-  */
-  
   color: hsl(0%, 0%, 15%);
+
+  /* Theme */
+  --teal: #008080;
+  --davys-gray: #4e4e4e;
+  --timberwolf: #d3d3d3;
+  --platinum: #e8e8e8;
+
+  /* Font Colours */
+  color: var(--davys-gray);
+  background-color: var(--platinum);
 
   /* Font family */
   font-family: Lato, sans-serif;
@@ -116,6 +121,8 @@ body {
 /* Footer */
 footer {
   margin-top: auto; /* Push footer to bottom */
+  background-color: var(--teal);
+  color: var(--platinum);
 }
 
 .cardholder {
@@ -130,11 +137,12 @@ footer {
 .topnav {
   margin: 0;
   padding: 0;
-  background-color: var(--indigo);
+  background-color: var(--teal);
   overflow: auto;
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 2;
 }
 
 .topnav a {
@@ -151,7 +159,7 @@ footer {
   right: 0;
   top: 0;
   padding: 14px 16px;
-  background-color: var(--indigo);
+  background-color: var(--teal);
   color: white;
 }
 
@@ -161,8 +169,66 @@ footer {
   -webkit-font-smoothing: antialiased;
 }
 
+.button-backgroundless {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.button-backgroundless i {
+  margin-right: 10px; /* Add some space between the icon and the text */
+}
+
+.button {
+  background-color: var(--teal);
+  color: var(--platinum);
+}
+
 .button i {
-  margin-right: 30px; /* Add some space between the icon and the text */
+  margin-right: 10px; /* Add some space between the icon and the text */
+}
+
+/* Images */
+
+#bible-channel {
+  position: relative;
+  z-index: 1;
+}
+
+.tbc-section {
+  position: relative;
+  text-align: center;
+  padding: 0;
+  color: var(--platinum);
+}
+
+.tbc-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tbc-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tbc-container-image {
+  width: 100%;
+  display: block;
+}
+
+.admin-container-image {
+  width: 100%;
+  display: block;
 }
 
 /* Device-specific scaling */
@@ -177,6 +243,13 @@ footer {
     --scaling-factor: var(--mobile-scale);
   }
   .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    text-align: center;
+  }
+  .button-backgroundless {
     display: flex;
     align-items: center;
     justify-content: center;
