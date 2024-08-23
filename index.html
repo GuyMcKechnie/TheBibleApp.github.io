@@ -210,7 +210,18 @@
     <script>
       function toggleDarkMode() {
         document.body.classList.toggle("dark-mode");
+        localStorage.setItem(
+          "darkMode",
+          document.body.classList.contains("dark-mode")
+        );
       }
+
+      // Add this script to each page
+      document.addEventListener("DOMContentLoaded", function () {
+        if (localStorage.getItem("darkMode") === "true") {
+          document.body.classList.add("dark-mode");
+        }
+      });
     </script>
   </body>
 
