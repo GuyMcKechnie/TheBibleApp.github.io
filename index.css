@@ -319,6 +319,20 @@ body {
   :root {
     --scaling-factor: var(--tablet-scale);
   }
+  .tbc-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+      url("tbc-container-image-desktop.jpg");
+  }
+  .adm-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+      url("admin-container-image.jpg");
+  }
 }
 
 @media only screen and (max-width: 768px) {
