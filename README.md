@@ -27,7 +27,7 @@ The Bible Channel website is a web application designed to provide a platform fo
 ### Setup
 
 - Clone the repository to your local machine.
-- Open the home.html file in a web browser to view the website.
+- Open the index.html file in a web browser to view the website.
 
 ### License
 
