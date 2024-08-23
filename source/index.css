@@ -205,7 +205,7 @@ footer {
   background-size: 100% 100%; /* Scale the image to full width and height */
   object-fit: cover; /* Maintain aspect ratio */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
-    url("tbc-container-image.jpg");
+    url("/assets/tbc-container-image.jpg");
 }
 
 .tbc-text {
@@ -233,7 +233,7 @@ footer {
   background-size: 100% 100%; /* Scale the image to full width and height */
   object-fit: cover; /* Maintain aspect ratio */
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
-    url("admin-container-image.jpg");
+    url("/assets/admin-container-image.jpg");
 }
 
 .adm-text {
@@ -324,14 +324,12 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
-      url("tbc-container-image-desktop.jpg");
+      url("/assets/tbc-container-image-desktop.jpg");
   }
   .adm-section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
-      url("admin-container-image.jpg");
   }
 }
 
