@@ -31,6 +31,10 @@
       <a href="index.html"> <i class="fa fa-fw fa-home"></i> Home</a>
       <a href="admin.html"> <i class="fa fa-fw fa-user"></i> Admins</a>
       <a href="devlog.html"> <i class="fa fa-fw fa-code"></i> Devlog</a>
+      <a href="javascript:void(0);" onclick="toggleDarkMode()">
+        <i class="fa fa-moon-o"></i>
+        Theme
+      </a>
       <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
         <i class="fa fa-bars"></i>
       </a>
@@ -115,6 +119,7 @@
           <p>Growth Rate (%) = (Average Daily Growth / Initial Value) * 100</p>
           <div id="growth-rate"></div>
           <div id="avg-daily-growth"></div>
+          <div id="avg-growth-acceleration"></div>
         </div>
       </section>
 
@@ -126,10 +131,13 @@
       // Define data for scatter plot
       var trace1 = {
         x: [
-          5300, 5400, 5500, 5600, 5700, 5800, 5900, 6000, 6100, 6200, 6300,
-          6400, 6500, 6600, 6700, 6800, 6900, 7000,
+          0, 1000, 2200, 3900, 4600, 5300, 5400, 5500, 5600, 5700, 5800, 5900,
+          6000, 6100, 6200, 6300, 6400, 6500, 6600, 6700, 6800, 6900, 7000,
         ],
-        y: [0, 3, 5, 7, 9, 10, 11, 14, 17, 18, 21, 23, 25, 26, 28, 31, 33, 35],
+        y: [
+          0, 30, 60, 90, 120, 172, 175, 177, 179, 181, 182, 183, 186, 189, 190,
+          193, 195, 197, 198, 200, 203, 205, 207,
+        ],
         mode: "lines",
         line: { color: "#008080" },
         type: "scatter",
@@ -140,11 +148,18 @@
       var layout = {
         title: "The Bible Channel Member Count",
         xaxis: { title: "Member Count" },
-        yaxis: { title: "Days Since 18 July" },
+        yaxis: { title: "Days" },
         paper_bgcolor: "#ffffff",
         plot_bgcolor: "#ffffff",
         font: { color: "#008080" },
       };
+
+      // Generate scatter plot using Plotly
+      Plotly.newPlot("scatterPlot", [trace1], layout, {
+        displayModeBar: false,
+        staticPlot: true,
+        responsive: true,
+      });
 
       const dailyGrowth = [];
       for (let i = 1; i < trace1.y.length; i++) {
@@ -154,19 +169,29 @@
         dailyGrowth.reduce((a, b) => a + b, 0) / dailyGrowth.length;
       const totalMemberCount = trace1.y[trace1.y.length - 1];
       const growthRate = (avgDailyGrowth / totalMemberCount) * 100;
+
+      // Calculate growth acceleration (rate of change of growth rate)
+      const growthAccelerations = [];
+      for (let i = 1; i < dailyGrowth.length; i++) {
+        growthAccelerations.push(
+          (dailyGrowth[i] - dailyGrowth[i - 1]) / dailyGrowth[i - 1]
+        );
+      }
+      const avgGrowthAcceleration =
+        growthAccelerations.reduce((a, b) => a + b, 0) /
+        growthAccelerations.length;
+
       document.getElementById(
         "growth-rate"
       ).innerHTML = `Growth Rate: ${growthRate.toFixed(2)}%`;
       document.getElementById(
         "avg-daily-growth"
       ).innerHTML = `Average Daily Growth: ${avgDailyGrowth.toFixed(2)}`;
-
-      // Generate scatter plot using Plotly
-      Plotly.newPlot("scatterPlot", [trace1], layout, {
-        displayModeBar: false,
-        staticPlot: true,
-        responsive: true,
-      });
+      document.getElementById(
+        "avg-growth-acceleration"
+      ).innerHTML = `Average Growth Acceleration: ${(
+        avgGrowthAcceleration * 100
+      ).toFixed(2)}%`;
     </script>
 
     <!-- Script to toggle top navigation menu -->
@@ -178,6 +203,13 @@
         } else {
           x.className = "topnav";
         }
+      }
+    </script>
+
+    <!-- Script to toggle dark mode -->
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
       }
     </script>
   </body>
