@@ -11,24 +11,27 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/e025b7a687.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="app.js"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <link rel="stylesheet" href="index.css" />
   </head>
 
   <body>
     <!-- Top Navigation Menu -->
-    <h1>The Bible Channel</h1>
-    <div class="topnav" id="topnav">
-      <a href="index.html"> <i class="fa fa-fw fa-home"></i> Home</a>
+    <!-- <div class="topnav" id="topnav">
+      <a href="index.html"> <i class="fa fa-fw fa-cross"></i></a>
       <a href="admin.html"> <i class="fa fa-fw fa-user"></i> Admins</a>
       <a href="devlog.html"> <i class="fa fa-fw fa-code"></i> Devlog</a>
       <a href="javascript:void(0);" onclick="toggleDarkMode()">
@@ -38,11 +41,17 @@
       <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
         <i class="fa fa-bars"></i>
       </a>
-    </div>
+    </div> -->
+    <nav id="navbar" class="navbar hidden">
+      <a id="navbar-home" href="index.html"
+        ><i class="fa-solid fa-cross fa-2xl"></i
+      ></a>
+      <a id="navbar-menu-item" href="admin.html">About</a>
+    </nav>
 
     <main>
       <!-- Section: The Bible Channel -->
-      <section id="bible-channel" class="tbc-section w3-container">
+      <section id="bible-channel" class="tbc-section w3-container hidden">
         <div class="tbc-text">
           <h2>The Bible Channel</h2>
           <p>
@@ -62,7 +71,7 @@
       <!-- Section: The Bible Community -->
       <section
         id="bible-community"
-        class="tbcom-section w3-container"
+        class="tbcom-section w3-container hidden"
         style="padding-top: 10%"
       >
         <h2>Connect, Grow, and Inspire with The Bible Community</h2>
@@ -84,7 +93,7 @@
       <hr />
 
       <!-- Section: Join Our Administration Team -->
-      <section id="admin" class="adm-section w3-container">
+      <section id="admin" class="adm-section w3-container hidden">
         <div class="adm-text">
           <h2>Want To Contribute?</h2>
           <p>
@@ -104,7 +113,7 @@
       <hr />
 
       <!-- Section: Channel Statistics -->
-      <section id="stats" class="w3-container">
+      <section id="stats" class="w3-container hidden">
         <div
           class="w3-card w3-round"
           style="padding-bottom: 16px; padding-top: 16px"
