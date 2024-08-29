@@ -1,0 +1,39 @@
+.panel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+    margin: 64px;
+}
+
+.content {
+    padding-left: 32px;
+    margin: 0;
+    width: 100%;
+    align-self: stretch;
+    border: 1px solid red;
+}
+
+.content h3 {
+    padding-top: 0;
+    margin-top: 0;
+    text-align: left;
+}
+
+.content p {
+    text-align: left;
+}
+
+.content a {
+    background-color: var(--tropical-indigo);
+}
+
+.image {
+    width: 60%;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 6px;
+}
