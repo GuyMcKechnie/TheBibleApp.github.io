@@ -1,9 +1,16 @@
+.panel-parent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 64px;
+    background-color: var(--timberwolf);
+}
+
 .panel {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 300px;
-    margin: 64px;
 }
 
 .content {
@@ -11,7 +18,7 @@
     margin: 0;
     width: 100%;
     align-self: stretch;
-    border: 1px solid red;
+    color: var(--davy-gray);
 }
 
 .content h3 {
@@ -25,7 +32,12 @@
 }
 
 .content a {
-    background-color: var(--tropical-indigo);
+    font-size: calc(
+        max(
+            var(--base-font-size) * var(--p-scale) * var(--scaling-factor),
+            var(--min-p-font-size)
+        )
+    );
 }
 
 .image {

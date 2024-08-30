@@ -5,14 +5,13 @@
     transition: all ease 0.2s;
     text-decoration: none;
     color: var(--platinum);
-}
-
-.button-teal {
     background-color: var(--teal);
-}
-
-.button-indigo {
-    background-color: var(--tropical-indigo);
+    font-size: calc(
+        max(
+            var(--base-font-size) * var(--p-scale) * var(--scaling-factor),
+            var(--min-p-font-size)
+        )
+    );
 }
 
 .button p {
@@ -22,10 +21,6 @@
 .button:hover {
     transform: translate(0, -3px);
     box-shadow: 0 20px 80px -10px var(--teal);
-}
-
-.button-indigo:hover {
-    box-shadow: 0 20px 80px -10px;
 }
 
 .button i {

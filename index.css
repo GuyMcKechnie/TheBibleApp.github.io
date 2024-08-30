@@ -3,218 +3,232 @@
 @import url("button.css");
 @import url("admin.css");
 @import url("sections.css");
-@import url('https://fonts.googleapis.com/css?family=Lato:700|Lato:400');
-
+@import url("https://fonts.googleapis.com/css?family=Lato:700|Lato:400");
 
 /* Root styles */
 :root {
-  /* Theme */
-  --teal: #008080;
-  --teal-light: #8cacac;
-  --tropical-indigo: #7F7EFF;
-  --tropical-indigo-light: #b1b1f1;
-  --davys-gray: #4e4e4e;
-  --timberwolf: #d3d3d3;
-  --platinum: #e8e8e8;
+    /* Theme */
+    --teal: #008080;
+    --teal-light: #8cacac;
+    --tropical-indigo: #7f7eff;
+    --tropical-indigo-light: #b1b1f1;
+    --davys-gray: #4e4e4e;
+    --timberwolf: #d3d3d3;
+    --platinum: #e8e8e8;
 
-  /* Font Colours */
-  color: var(--davys-gray);
-  background-color: var(--platinum);
+    /* Font Colours */
+    color: var(--davys-gray);
+    background-color: var(--timberwolf);
 
-  /* Font family */
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
+    /* Font family */
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
 
-  /* Custom indigo color */
-  --indigo: #3f51b5;
+    /* Custom indigo color */
+    --indigo: #3f51b5;
 
-  /* Font scaling variables */
-  --base-font-size: 16px;
-  --h1-scale: 2.99;
-  --h2-scale: 2.49;
-  --h3-scale: 2.07;
-  --h4-scale: 1.44;
-  --p-scale: 1;
-  --ul-scale: 1;
+    /* Font scaling variables */
+    --base-font-size: 16px;
+    --h1-scale: 2.99;
+    --h2-scale: 2.49;
+    --h3-scale: 2.07;
+    --h4-scale: 1.44;
+    --p-scale: 1;
+    --ul-scale: 1;
 
-  /* Device-specific scaling factors */
-  --scaling-factor: 1;
-  --tablet-scale: 1.1;
-  --mobile-scale: 1.5;
+    /* Device-specific scaling factors */
+    --scaling-factor: 1;
+    --tablet-scale: 1.1;
+    --mobile-scale: 1.5;
 
-  /* Minimum font sizes */
-  --min-h1-font-size: 24px;
-  --min-h2-font-size: 18px;
-  --min-h3-font-size: 14px;
-  --min-h4-font-size: 12px;
-  --min-p-font-size: 10px;
+    /* Minimum font sizes */
+    --min-h1-font-size: 24px;
+    --min-h2-font-size: 18px;
+    --min-h3-font-size: 14px;
+    --min-h4-font-size: 12px;
+    --min-p-font-size: 10px;
 
-  /* Hide scrollbars */
-  ::-webkit-scrollbar {
-    display: none;
-  }
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+    /* Hide scrollbars */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 /* Base styles */
 * {
-  box-sizing: border-box; /* Use border-box for all elements */
+    box-sizing: border-box; /* Use border-box for all elements */
 }
 
 /* Headings */
 h1 {
-  font-weight: 700;
-  text-align: center;
-  font-size: calc(
-    max(
-      var(--base-font-size) * var(--h1-scale) * var(--scaling-factor),
-      var(--min-h1-font-size)
-    )
-  );
+    font-weight: 700;
+    text-align: center;
+    font-size: calc(
+        max(
+            var(--base-font-size) * var(--h1-scale) * var(--scaling-factor),
+            var(--min-h1-font-size)
+        )
+    );
 }
 
 h2 {
-  font-weight: 700;
-  font-size: calc(
-    max(
-      var(--base-font-size) * var(--h2-scale) * var(--scaling-factor),
-      var(--min-h2-font-size)
-    )
-  );
+    font-weight: 700;
+    font-size: calc(
+        max(
+            var(--base-font-size) * var(--h2-scale) * var(--scaling-factor),
+            var(--min-h2-font-size)
+        )
+    );
 }
 
 h3 {
-  font-weight: 700;
-  font-size: calc(
-    max(
-      var(--base-font-size) * var(--h3-scale) * var(--scaling-factor),
-      var(--min-h3-font-size)
-    )
-  );
+    font-weight: 700;
+    font-size: calc(
+        max(
+            var(--base-font-size) * var(--h3-scale) * var(--scaling-factor),
+            var(--min-h3-font-size)
+        )
+    );
 }
 
 h4 {
-  font-weight: 700;
-  font-size: calc(
-    max(
-      var(--base-font-size) * var(--h4-scale) * var(--scaling-factor),
-      var(--min-h4-font-size)
-    )
-  );
+    font-weight: 700;
+    font-size: calc(
+        max(
+            var(--base-font-size) * var(--h4-scale) * var(--scaling-factor),
+            var(--min-h4-font-size)
+        )
+    );
 }
 
 /* Paragraphs and lists */
 p,
-ul, .button {
-  font-size: calc(
-    max(
-      var(--base-font-size) * var(--p-scale) * var(--scaling-factor),
-      var(--min-p-font-size)
-    )
-  );
+ul {
+    font-size: calc(
+        max(
+            var(--base-font-size) * var(--p-scale) * var(--scaling-factor),
+            var(--min-p-font-size)
+        )
+    );
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  flex-grow: 1; /* Take up full height */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    flex-grow: 1; /* Take up full height */
 }
 
 /* Footer */
 footer {
-  margin-top: auto; /* Push footer to bottom */
-  background-color: var(--teal);
-  color: var(--platinum);
+    margin-top: auto; /* Push footer to bottom */
+    background-color: var(--teal);
+    color: var(--platinum);
 }
 
 .cardholder {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .cardholder p {
-  text-align: center;
+    text-align: center;
 }
 
 .icon::before {
-  display: inline-block;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Images */
 
 #bible-channel {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .tbc-section {
-  position: relative;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 600px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  object-fit: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
-    url("tbc-container-image.jpg");
+    position: relative;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    object-fit: cover;
+    background-color: var(--timberwolf);
+}
+
+.tbc-image {
+    filter: blur(2px) brightness(0.8);
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-position: 0 80%;
 }
 
 .tbc-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 70%;
-  transform: translate(-50%, -50%);
-  color: var(--platinum);
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+    color: var(--platinum);
 }
 
 .tbcom-section {
-  text-align: center;
+    text-align: center;
 }
 
 /* Device-specific scaling */
 @media only screen and (min-width: 768px) {
-  :root {
-    --scaling-factor: var(--tablet-scale);
-  }
-  .tbc-section {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
-      url("tbc-container-image-desktop.jpg");
-  }
+    :root {
+        --scaling-factor: var(--tablet-scale);
+    }
+    .tbc-section {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        /*background-image: linear-gradient(
+                rgba(0, 0, 0, 0.8),
+                rgba(0, 0, 0, 0.4)
+            ),
+            url("tbc-container-image-desktop.jpg");*/
+    }
 }
 
 @media only screen and (max-width: 768px) {
-  :root {
-    --scaling-factor: var(--mobile-scale);
-  }
-  footer {
-    position: relative;
-    margin-top: 0;
-  }
+    :root {
+        --scaling-factor: var(--mobile-scale);
+    }
+    footer {
+        position: relative;
+        margin-top: 0;
+    }
 }
 
 .hidden {
-  opacity: 0;
-  filter: blur(5px);
-  transition: all 1s;
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
 }
 
 @media (prefers-reduced-motion) {
-  .hidden {
-    transition: none;
-  }
+    .hidden {
+        transition: none;
+    }
 }
 
 .show {
-  opacity: 1;
-  filter: blur(0px);
+    opacity: 1;
+    filter: blur(0px);
 }
