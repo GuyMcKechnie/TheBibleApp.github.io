@@ -6,47 +6,39 @@
         <title>Home | The Bible Channel</title>
 
         <!-- External CSS and libraries -->
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <link rel="icon" href="favicon.svg" type="image/svg+xml" />
         <link
             rel="stylesheet"
             href="https://www.w3schools.com/w3css/4/w3.css"
         />
         <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        />
-        <link
             href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
             rel="stylesheet"
         />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <link rel="stylesheet" href="index.css" />
         <script
             src="https://kit.fontawesome.com/e025b7a687.js"
             crossorigin="anonymous"
         ></script>
         <script defer src="app.js"></script>
-
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        />
-
-        <link rel="stylesheet" href="index.css" />
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     </head>
 
     <body>
         <!-- Top Navigation Menu -->
-        <nav id="navbar" class="navbar hidden">
+        <nav id="navbar" class="navbar">
             <a id="navbar-home" href="index.html"
                 ><i class="fa-solid fa-cross fa-2xl"></i
             ></a>
-            <a id="navbar-menu-item" href="admin.html">About</a>
-            <a id="navbar-menu-item" href="devlog.html">Devlog</a>
         </nav>
 
         <main>
             <!-- Section: The Bible Channel -->
-            <div id="hero-parent" class="hero-parent">
+            <div id="hero-parent" class="hero-parent hidden">
                 <section id="hero-panel" class="hero-panel">
                     <div id="hero-image" class="hero-image"></div>
                     <div id="hero-content" class="hero-content">
@@ -106,55 +98,77 @@
                             href="https://chat.whatsapp.com/EiwtC7HR60r6uGMMd8E85j"
                             class="button"
                         >
-                            <i class="fab fa-whatsapp"></i> Join Our Community
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                height="24px"
+                                viewBox="0 -960 960 960"
+                                width="24px"
+                                fill="#e8eaed"
+                            >
+                                <path
+                                    d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"
+                                />
+                            </svg>
+                            Join Our Community
                         </a>
                     </div>
                 </section>
             </div>
 
-            <!-- <section id="admin" class="adm-section w3-container hidden">
-                <div class="adm-text">
-                    <h2>Want To Contribute?</h2>
-                    <p>
-                        Are you eager to make a meaningful impact in our
-                        community? Explore how you can become an integral part
-                        of our administration team and play a key role in
-                        guiding our shared journey.
-                    </p>
-                    <a
-                        href="admin.html"
-                        class="button w3-button w3-hover-shadow w3-card w3-round"
-                    >
-                        <i class="fas fa-arrow-right"></i> Find Out More
-                    </a>
-                </div>
-            </section>
-
-            <hr />
-
-            <section id="stats" class="w3-container hidden">
-                <div
-                    class="w3-card w3-round"
-                    style="padding-bottom: 16px; padding-top: 16px"
-                >
+            <!-- Section: Statistics -->
+            <div class="stats-parent">
+                <div class="stats-panel hidden">
                     <h2 style="text-align: center">Channel Statistics</h2>
-                    <div
-                        id="scatterPlot"
-                        style="width: 100%; height: 400px"
-                    ></div>
-                    <h2 style="text-align: center">Growth Rate</h2>
-                    <div style="text-align: center">
-                        <p>
-                            Growth Rate (%) = (Average Daily Growth / Initial
-                            Value) * 100
-                        </p>
-                        <div id="growth-rate"></div>
-                        <div id="avg-daily-growth"></div>
-                        <div id="avg-growth-acceleration"></div>
+                    <div class="stats-content">
+                        <div id="scatterPlot"></div>
                     </div>
                 </div>
-            </section> -->
+            </div>
+
+            <!-- Section: Admin -->
+            <div class="admin-parent">
+                <div class="admin-panel hidden">
+                    <div
+                        class="admin-image"
+                        style="
+                            background-image: url('admin-container-image.jpg');
+                        "
+                    ></div>
+                    <div class="admin-content">
+                        <h3>Become An Admin</h3>
+                        <p>
+                            Want to be more involved in the growth of our
+                            community? Joining our admin team is your
+                            opportunity to contribute, share, and lead by
+                            helping us manage and curate valuable content. As an
+                            admin, you’ll play a key role in shaping the future
+                            of The Bible Channel and its mission to inspire
+                            others. Click below to take the first step in
+                            becoming a member of our team.
+                        </p>
+                        <a
+                            href="https://forms.gle/VhfUBF7ttYx576EK9"
+                            class="button"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                height="24px"
+                                viewBox="0 -960 960 960"
+                                width="24px"
+                                fill="#e8eaed"
+                            >
+                                <path
+                                    d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"
+                                />
+                            </svg>
+                            Become an Admin
+                        </a>
+                    </div>
+                </div>
+            </div>
         </main>
+
+        <footer>© 2024 The Bible Channel. All rights reserved.</footer>
 
         <!-- Plotly script to generate scatter plot -->
         <script>
@@ -177,12 +191,11 @@
 
             // Define layout for scatter plot
             var layout = {
-                title: "The Bible Channel Member Count",
                 xaxis: { title: "Member Count" },
                 yaxis: { title: "Days" },
-                paper_bgcolor: "#e8e8e8",
-                plot_bgcolor: "#e8e8e8",
-                font: { color: "#008080" },
+                paper_bgcolor: "#8cacac9e",
+                plot_bgcolor: "#8cacac3e",
+                font: { color: "#e8e8e8" },
             };
 
             // Generate scatter plot using Plotly
@@ -191,75 +204,6 @@
                 staticPlot: true,
                 responsive: true,
             });
-
-            const dailyGrowth = [];
-            for (let i = 1; i < trace1.y.length; i++) {
-                dailyGrowth.push(trace1.y[i] - trace1.y[i - 1]);
-            }
-            const avgDailyGrowth =
-                dailyGrowth.reduce((a, b) => a + b, 0) / dailyGrowth.length;
-            const totalMemberCount = trace1.y[trace1.y.length - 1];
-            const growthRate = (avgDailyGrowth / totalMemberCount) * 100;
-
-            // Calculate growth acceleration (rate of change of growth rate)
-            const growthAccelerations = [];
-            for (let i = 1; i < dailyGrowth.length; i++) {
-                growthAccelerations.push(
-                    (dailyGrowth[i] - dailyGrowth[i - 1]) / dailyGrowth[i - 1]
-                );
-            }
-            const avgGrowthAcceleration =
-                growthAccelerations.reduce((a, b) => a + b, 0) /
-                growthAccelerations.length;
-
-            document.getElementById(
-                "growth-rate"
-            ).innerHTML = `Growth Rate: ${growthRate.toFixed(2)}%`;
-            document.getElementById(
-                "avg-daily-growth"
-            ).innerHTML = `Average Daily Growth: ${avgDailyGrowth.toFixed(2)}`;
-            document.getElementById(
-                "avg-growth-acceleration"
-            ).innerHTML = `Average Growth Acceleration: ${(
-                avgGrowthAcceleration * 100
-            ).toFixed(2)}%`;
-        </script>
-
-        <!-- Script to toggle top navigation menu -->
-        <script>
-            function toggleMenu() {
-                var x = document.getElementById("topnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }
-        </script>
-
-        <!-- Script to toggle dark mode -->
-        <script>
-            function toggleDarkMode() {
-                document.body.classList.toggle("dark-mode");
-                localStorage.setItem(
-                    "darkMode",
-                    document.body.classList.contains("dark-mode")
-                );
-            }
-
-            // Add this script to each page
-            document.addEventListener("DOMContentLoaded", function () {
-                if (localStorage.getItem("darkMode") === "true") {
-                    document.body.classList.add("dark-mode");
-                }
-            });
         </script>
     </body>
-
-    <!-- Footer 
-    <footer class="w3-container">
-        <p style="text-align: center; margin: 10px 0">
-            &copy; 2024 The Bible Channel. All rights reserved.
-        </p>
-    </footer> -->
 </html>

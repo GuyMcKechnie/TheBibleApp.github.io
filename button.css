@@ -1,7 +1,7 @@
 .button {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     height: 64px;
     gap: 12px;
     border-radius: 7.5px;
@@ -12,7 +12,8 @@
     font-size: 18px;
     font-weight: 700;
     padding: 0px 24px;
-
+    width: 300px;
+    text-align: center;
 }
 
 .button svg {
@@ -26,20 +27,6 @@
 
 @media only screen and (max-width: 768px) {
     .button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 60px;
-        text-align: center;
-    }
-    .button-backgroundless {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 60px;
-        text-align: center;
-    }
-    .button i {
-        margin-right: 10px;
+        width: 80%;
     }
 }

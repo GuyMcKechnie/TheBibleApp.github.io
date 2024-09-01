@@ -42,6 +42,15 @@ h1 {
 
 /* Mobile Device Responsiveness */
 @media only screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: calc(
+            max(
+                var(--base-font-size) * var(--h1-scale) * var(--scaling-factor) *
+                    0.8,
+                var(--min-h1-font-size)
+            )
+        );
+    }
 }
 /* Desktop Device Responsiveness */
 @media only screen and (min-width: 768px) {

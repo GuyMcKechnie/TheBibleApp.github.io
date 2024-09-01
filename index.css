@@ -4,6 +4,9 @@
 @import url("admin.css");
 @import url("sections.css");
 @import url("hero-section.css");
+@import url("stats-section.css");
+@import url("admin-section.css");
+@import url("footer.css");
 @import url("https://fonts.googleapis.com/css?family=Lato:700|Lato:400");
 
 /* Root styles */
@@ -53,6 +56,23 @@
     }
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "navbar" "main" "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+nav {
+    grid-area: navbar;
+}
+main {
+    grid-area: main;
+}
+footer {
+    grid-area: footer;
 }
 
 h1,

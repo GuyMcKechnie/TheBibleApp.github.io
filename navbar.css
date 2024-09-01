@@ -1,45 +1,47 @@
 .navbar {
-  background-color: #ffffff;
-  padding: 6px;
-  padding-left: 12px;
-  padding-right: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+    top: 0;
+    position: sticky;
+    background-color: #ffffff;
+    padding: 6px;
+    padding-left: 16px;
+    padding-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: nowrap;
+    z-index: 2;
 }
 
 #navbar-home {
-  margin-right: auto;
-  color: teal;
-  border-radius: 10%;
-  border: 6px solid #ffffff;
-  transition: all 0.2s ease;
+    color: teal;
+    border-radius: 10%;
+    border: 6px solid #ffffff;
+    transition: all 0.2s ease;
 }
 
 #navbar-home:hover {
-  background: teal;
-  border: 6px solid teal;
-  color: #ffffff;
+    background: teal;
+    border: 6px solid teal;
+    color: #ffffff;
 }
 
 #navbar-menu-item {
-  color: teal;
-  border-radius: 10%;
-  border: 6px solid #ffffff;
-  transition: all 0.2s ease;
-
-  font-weight: bold;
-  text-decoration: none;
+    color: teal;
+    border-radius: 10%;
+    border: 6px solid #ffffff;
+    transition: all 0.2s ease;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 #navbar-menu-item:hover {
-  background: teal;
-  border: 6px solid teal;
-  color: #ffffff;
+    background: teal;
+    border: 6px solid teal;
+    color: #ffffff;
 }
 
 .navbar a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
