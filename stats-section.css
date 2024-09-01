@@ -1,0 +1,25 @@
+.stats-parent {
+    padding: 16px;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: var(--teal-light);
+}
+
+.stats-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-wrap: nowrap;
+    color: var(--platinum);
+}
+
+.stats-content {
+    color: var(--platinum);
+    width: 100%;
+}
+
+@media only screen and (max-width: 786px) {
+    .stats-panel {
+        flex-wrap: wrap;
+    }
+}

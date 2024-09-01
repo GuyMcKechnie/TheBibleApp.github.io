@@ -1,37 +1,32 @@
-.button-backgroundless {
-  color: var(--teal);
-  text-decoration: none;
-}
-
-.button-backgroundless i {
-  margin-right: 10px;
-}
-
 .button {
-  background-color: var(--teal);
-  color: var(--platinum);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    gap: 12px;
+    border-radius: 7.5px;
+    transition: all ease 0.2s;
+    text-decoration: none;
+    color: var(--platinum);
+    background-color: var(--teal);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0px 24px;
+    width: 300px;
+    text-align: center;
 }
 
-.button i {
-  margin-right: 10px;
+.button svg {
+    fill: var(--platinum);
+}
+
+.button:hover {
+    transform: translate(0, -3px);
+    box-shadow: 0 20px 80px -10px var(--teal);
 }
 
 @media only screen and (max-width: 768px) {
-  .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-    text-align: center;
-  }
-  .button-backgroundless {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-    text-align: center;
-  }
-  .button i {
-    margin-right: 10px;
-  }
+    .button {
+        width: 80%;
+    }
 }
