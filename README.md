@@ -1,42 +1,38 @@
 # The Bible Channel Website
 
-## Overview
+A responsive and engaging website for The Bible Channel, a community-driven platform for Christians to connect, share, and grow in faith.
 
-The Bible Channel website is a web application designed to provide a platform for Christians to connect, grow, and inspire each other. The website features a top navigation menu, sections for The Bible Channel, The Bible Community, Join Our Administration Team, and Channel Statistics.
+## Features
 
-### Features
+- A clean and modern design with a user-friendly interface
+- A hero section with a call-to-action to join the WhatsApp community
+- A community section with information about The Bible Community and a link to join
+- A statistics section with a scatter plot showing member growth over time
+- An admin section with information about becoming an admin and a link to apply
+- A responsive design that adapts to different screen sizes and devices
 
-- Responsive design using W3.CSS
-- Top navigation menu with toggle functionality
-- Dark mode toggle functionality
-- The Bible Channel section with WhatsApp join link
-- The Bible Community section with WhatsApp join link
-- Join Our Administration Team section with link to admin page
-- Channel Statistics section with scatter plot and growth rate calculations
-- Plotly library used for generating scatter plot
-- JavaScript used for toggle menu, dark mode, and statistics calculations
-
-### Technologies Used
+## Technologies Used
 
 - HTML5
-- CSS3 (W3.CSS)
-  --JavaScript (Plotly library)
-- Font Awesome icons
-- Google Fonts (Lato)
+- CSS3 (with W3.CSS framework)
+- JavaScript (with Plotly library)
 
-### Setup
+## Purpose
 
-- Clone the repository to your local machine.
-- Open the index.html file in a web browser to view the website.
+The purpose of this project is to create a website that serves as a hub for The Bible Channel community, providing a central location for information, resources, and community engagement.
 
-### License
+## Contributing
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes. We welcome contributions from anyone who wants to help improve the website and support the community.
 
-### Contributing
+## License
 
-Contributions are welcome! If you'd like to contribute to this project, please fork the repository, make your changes, and submit a pull request.
+This project is licensed under the MIT License. See LICENSE.md for details.
 
-### Authors
+## Acknowledgments
+
+We would like to thank the W3.CSS team for their excellent framework, and the Plotly team for their powerful plotting library. We would also like to thank the WhatsApp team for their API and support.
+
+## Authors
 
 Guy McKechnie
