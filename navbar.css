@@ -17,6 +17,10 @@
     border-radius: 10%;
     border: 6px solid #ffffff;
     transition: all 0.2s ease;
+    font-size: 40px;
+    font-weight: 900;
+    text-decoration: none;
+    max-height: 40px
 }
 
 #navbar-home:hover {
