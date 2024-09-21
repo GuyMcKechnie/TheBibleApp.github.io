@@ -218,7 +218,22 @@
                 type: "scatter",
                 fill: "tozeroy",
             };
+            // Define layout for scatter plot
+            var layout = {
+                yaxis: { title: "Member Count" },
+                xaxis: { title: "Days" },
+                paper_bgcolor: "#8cacac9e",
+                plot_bgcolor: "#8cacac3e",
+                font: { color: "#e8e8e8" },
+                title: "Member Growth Over Time",
+            };
 
+            // Generate scatter plot using Plotly
+            Plotly.newPlot("scatterPlot", [trace1], layout, {
+                displayModeBar: false,
+                staticPlot: true,
+                responsive: true,
+            });
             var rateOfChange = [];
             for (var i = 1; i < trace1.y.length; i++) {
                 rateOfChange.push(
@@ -229,7 +244,7 @@
             var averageRateOfChange =
                 rateOfChange.reduce((a, b) => a + b, 0) / rateOfChange.length;
             document.getElementById("rateOfChange").innerHTML =
-                averageRateOfChange.toFixed(2) + " people / day";
+                averageRateOfChange.toFixed(2) + " members / day";
 
             var predictedDaysTo10K =
                 (10000 - trace1.y[trace1.y.length - 1]) / averageRateOfChange;
@@ -248,23 +263,6 @@
                     month: "long",
                     day: "numeric",
                 });
-
-            // Define layout for scatter plot
-            var layout = {
-                yaxis: { title: "Member Count" },
-                xaxis: { title: "Days" },
-                paper_bgcolor: "#8cacac9e",
-                plot_bgcolor: "#8cacac3e",
-                font: { color: "#e8e8e8" },
-                title: "Member Growth Over Time",
-            };
-
-            // Generate scatter plot using Plotly
-            Plotly.newPlot("scatterPlot", [trace1], layout, {
-                displayModeBar: false,
-                staticPlot: true,
-                responsive: true,
-            });
         </script>
     </body>
 </html>
