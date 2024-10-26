@@ -6,10 +6,10 @@ function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     const navItems = [
-        { label: "Home", href: "/" },
         { label: "The Group", href: "#the-bible-group" },
         { label: "About Us", href: "#about-us" },
         { label: "Testimonials", href: "#testimonials" },
+        { label: "Admin Applications", href: "#admin" },
     ];
 
     return (
