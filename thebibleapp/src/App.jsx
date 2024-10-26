@@ -7,7 +7,7 @@ const App = () => {
             <Router>
                 <Routes>
                     <Route
-                        path="/TheBibleeApp.github.io/"
+                        path="/TheBibleApp.github.io/"
                         element={<LandingPage />}
                     />
                 </Routes>
