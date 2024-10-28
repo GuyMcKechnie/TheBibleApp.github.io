@@ -36,3 +36,4 @@ We would like to thank the W3.CSS team for their excellent framework, and the Pl
 ## Authors
 
 Guy McKechnie
+Thanks to [Prosper](https://github.com/prospersibanda)
