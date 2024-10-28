@@ -6,7 +6,10 @@ const App = () => {
         <div>
             <Router>
                 <Routes>
-                    <Route path="/" element={<LandingPage />} />
+                    <Route
+                        path="/TheBibleApp.github.io/"
+                        element={<LandingPage />}
+                    />
                 </Routes>
             </Router>
         </div>

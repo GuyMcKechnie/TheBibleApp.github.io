@@ -1,0 +1,4 @@
+[build]
+  base = "thebibleapp"
+  publish = "thebibleapp/build"
+  command = "npm run build"
