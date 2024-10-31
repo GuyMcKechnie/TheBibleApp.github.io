@@ -13,7 +13,7 @@ function Group() {
             icon: <FaWhatsapp />,
             title: "The Bible Community",
             description:
-                "A space for our community to connect. Join our conversations, share inspiring content, and grow in faith with over 500 like minded individuals. Whether you want to contribute or just find encouragement , this is where we come together to share God’s love.",
+                "A space for our community to connect. Join our conversations, share inspiring content, and grow in faith with over 700 like minded individuals. Whether you want to contribute or just find encouragement , this is where we come together to share God’s love.",
             link: "https://chat.whatsapp.com/EiwtC7HR60r6uGMMd8E85j",
         },
         {

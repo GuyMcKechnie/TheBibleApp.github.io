@@ -11,10 +11,9 @@ function Testimonials() {
 
         {
             icon: <FaPray />,
-
-            label: "Mpumi O.",
+            label: "Kgafela M.",
             testimonial:
-                "he Bible Channel has reignited my passion for scripture. I’m grateful for the community and the positive environment it fosters!",
+                "Being part of this Bible Group has been an incredible blessing in my spiritual journey. The daily insights and teachings have deepened my understanding of scripture and have encouraged me to live my faith more boldly.",
         },
         {
             icon: <FaChurch />,
