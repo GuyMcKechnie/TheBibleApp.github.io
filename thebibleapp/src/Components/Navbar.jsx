@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FaCross, FaBars, FaTimes } from "react-icons/fa";
-import navbarIcon from "../Assets/navbarIcon.svg";
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,9 +17,7 @@ function Navbar() {
                 <div className="flex justify-between h-16">
                     <div className="flex-shrink-0 flex items-center">
                         <div className="text-gray-700 text-lg font-medium">
-                            <a href="/">
-                                <FaCross className="text-sky-400" size={32} />
-                            </a>
+                            <FaCross className="text-sky-400" size={32} />
                         </div>
                     </div>
 
