@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/TheBibleApp.github.io/static/css/main.4afd0fd1.css",
-    "main.js": "/TheBibleApp.github.io/static/js/main.19163843.js",
+    "main.css": "/TheBibleApp.github.io/static/css/main.b6a38fc2.css",
+    "main.js": "/TheBibleApp.github.io/static/js/main.660f40f1.js",
     "index.html": "/TheBibleApp.github.io/index.html",
-    "main.4afd0fd1.css.map": "/TheBibleApp.github.io/static/css/main.4afd0fd1.css.map",
-    "main.19163843.js.map": "/TheBibleApp.github.io/static/js/main.19163843.js.map"
+    "main.b6a38fc2.css.map": "/TheBibleApp.github.io/static/css/main.b6a38fc2.css.map",
+    "main.660f40f1.js.map": "/TheBibleApp.github.io/static/js/main.660f40f1.js.map"
   },
   "entrypoints": [
-    "static/css/main.4afd0fd1.css",
-    "static/js/main.19163843.js"
+    "static/css/main.b6a38fc2.css",
+    "static/js/main.660f40f1.js"
   ]
 }
