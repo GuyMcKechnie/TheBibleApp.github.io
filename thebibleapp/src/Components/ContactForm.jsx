@@ -14,7 +14,7 @@ function ContactForm() {
             document.body.removeChild(script);
         };
     }, []);
-    return <div></div>;
+    return <div className="bg-gray-900"></div>;
 }
 
 export default ContactForm;

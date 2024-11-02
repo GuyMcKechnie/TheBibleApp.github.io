@@ -24,13 +24,13 @@ function Testimonials() {
     ];
 
     return (
-        <section id="testimonials" className="py-20 bg-gray-50">
+        <section id="testimonials" className="py-20 bg-gray-900">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-extrabold text-gray-700 sm:text-4xl">
+                    <h2 className="text-3xl font-extrabold text-gray-400 sm:text-4xl">
                         Testimonials
                     </h2>
-                    <p className="mt-4 max-w-3xl text-xl text-gray-600 lg:mx-auto">
+                    <p className="mt-4 max-w-3xl text-xl text-gray-500 lg:mx-auto">
                         Discover how our mission has touched lives and inspired
                         faith. Read the heartfelt testimonials from our members
                         who have experienced transformation and encouragement
@@ -44,17 +44,17 @@ function Testimonials() {
                         {testimonials.map((testimonial, index) => (
                             <div
                                 key={index}
-                                className="bg-white p-6 rounded-lg shadow-lg text-center"
+                                className="bg-gray-800 p-6 rounded-lg shadow-lg text-center"
                             >
                                 <div className="flex gap-8">
                                     <div className="text-sky-400 text-3xl">
                                         {testimonial.icon}
                                     </div>
-                                    <h3 className="text-gray-600 font-bold text-2xl">
+                                    <h3 className="text-gray-300 font-bold text-2xl">
                                         {testimonial.label}
                                     </h3>
                                 </div>
-                                <p className="mt-4 max-w-3xl text-xl text-gray-600 lg:mx-auto">
+                                <p className="mt-4 max-w-3xl text-xl text-gray-400 lg:mx-auto">
                                     {testimonial.testimonial}
                                 </p>
                             </div>

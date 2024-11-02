@@ -12,13 +12,11 @@ function Navbar() {
     ];
 
     return (
-        <nav className="bg-white shadow-lg fixed w-full z-50">
+        <nav className="bg-gray-800 shadow-lg fixed w-full z-50">
             <div className="max-w-7xl mx-auto px-4 ">
                 <div className="flex justify-between h-16">
                     <div className="flex-shrink-0 flex items-center">
-                        <div className="text-gray-700 text-lg font-medium">
-                            <FaCross className="text-sky-400" size={32} />
-                        </div>
+                        <FaCross className="text-white" size={32} />
                     </div>
 
                     {/* Desktop Menu */}
@@ -27,7 +25,7 @@ function Navbar() {
                             <a
                                 key={item.label}
                                 href={item.href}
-                                className="text-gray-700 hover:text-sky-400 px-3 py-2 rounded-md text-sm font-medium"
+                                className="text-gray-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                             >
                                 {item.label}
                             </a>

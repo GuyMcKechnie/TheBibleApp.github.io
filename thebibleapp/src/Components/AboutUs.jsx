@@ -1,7 +1,7 @@
 function About() {
     const stats = [
         { label: "Combined Followers", value: "8,000+" },
-        { label: "Community Members", value: "500+" },
+        { label: "Community Members", value: "800+" },
         { label: "Content Posted", value: "1500+" },
         { label: "Iniatiaves Launched", value: "3" },
     ];
@@ -30,13 +30,13 @@ function About() {
     ];
 
     return (
-        <section id="about-us" className="py-20 bg-white-50">
+        <section id="about-us" className="py-20 bg-gray-900">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-extrabold text-gray-700 sm:text-4xl">
+                    <h2 className="text-3xl font-extrabold text-gray-400 sm:text-4xl">
                         About Us
                     </h2>
-                    <p className="mt-4 max-w-3xl text-xl text-gray-600 lg:mx-auto">
+                    <p className="mt-4 max-w-3xl text-xl text-gray-500 lg:mx-auto">
                         We began our journey at the start of 2024 with the goal
                         of becoming one of the leading Christian influences in
                         South Africa.
@@ -48,9 +48,9 @@ function About() {
                     {stats.map((stat, index) => (
                         <div
                             key={index}
-                            className="bg-white p-6 rounded-lg shadow-lg text-center"
+                            className="bg-gray-800 p-6 rounded-lg shadow-lg text-center"
                         >
-                            <p className="text-3xl font-bold text-sky-400">
+                            <p className="text-3xl font-bold text-white">
                                 {stat.value}
                             </p>
                             <p className="text-gray-600">{stat.label}</p>
@@ -59,11 +59,11 @@ function About() {
                 </div>
 
                 {/* Story Section */}
-                <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
-                    <h3 className="text-2xl font-bold text-gray-700 mb-4">
+                <div className="bg-gray-800 rounded-lg shadow-lg p-8 mb-16">
+                    <h3 className="text-2xl font-bold text-gray-300 mb-4">
                         Our Story
                     </h3>
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-gray-400 mb-4">
                         Recognizing the shortage of Christian influences in
                         South Africa, we saw a chance to make a meaningful
                         impact. We began with a small team of passionate
@@ -71,7 +71,7 @@ function About() {
                         expanded our team and broadened our reach through a
                         variety of impactful projects and initiatives.
                     </p>
-                    <p className="text-gray-600">
+                    <p className="text-gray-400">
                         Today, we proudly stand as one of the leading Christian
                         influences in South Africa, with numerous achievements
                         that fill us with gratitude. Our commitment to making a
@@ -85,12 +85,12 @@ function About() {
                     {values.map((value, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-lg shadow-lg p-8"
+                            className="bg-gray-800 rounded-lg shadow-lg p-8"
                         >
-                            <h3 className="text-xl font-bold text-gray-700 mb-4">
+                            <h3 className="text-xl font-bold text-gray-300 mb-4">
                                 {value.title}
                             </h3>
-                            <p className="text-gray-600">{value.description}</p>
+                            <p className="text-gray-400">{value.description}</p>
                         </div>
                     ))}
                 </div>

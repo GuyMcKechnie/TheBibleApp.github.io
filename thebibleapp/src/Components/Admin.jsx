@@ -2,13 +2,13 @@ import ContactForm from "./ContactForm";
 
 function Admin() {
     return (
-        <div id="admin" className="relative bg-white py-20 overflow-hidden">
+        <div id="admin" className="relative bg-gray-900 py-20 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-extrabold text-gray-700 sm:text-4xl">
+                    <h2 className="text-3xl font-extrabold text-gray-400 sm:text-4xl">
                         Admin Applications
                     </h2>
-                    <p className="mt-4 text-xl text-gray-600">
+                    <p className="mt-4 text-xl text-gray-500">
                         Want to be more involved in the growth of our community?
                         Joining our admin team is your opportunity to
                         contribute, share, and lead by helping us manage and
